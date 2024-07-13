@@ -1,0 +1,5 @@
+._cache_git-credential-manager.exe
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/

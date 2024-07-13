@@ -1,0 +1,43 @@
+// 原配置
+// {
+//   "compilerOptions": {
+//     "module": "NodeNext",
+//     "moduleResolution": "NodeNext",
+//     "target": "ES2022"
+//   },
+//   "include": [
+//     "src/.vuepress/**/*.ts",
+//     "src/.vuepress/**/*.vue"
+// , "src/.vuepress/layouts/Layout.js"  ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }
+// 修改后配置
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "target": "ES2020",
+    "baseUrl": "./", // 基础路径 
+    "paths": {  // 配置别名来简化导入路径
+      "@/*": ["src/*"],
+      "@theme-hope/*": ["node_modules/vuepress-theme-hope/lib/client/*"], // 例如 import { useDarkmode } from "@theme-hope/modules/outlook/composables/index";
+      "vuepress-theme-hope/*": ["node_modules/vuepress-theme-hope/lib/*"], 
+    },
+    "types": [
+      "vuepress/client-types"
+    ]
+  },
+  "include": [
+    // Vue 文件类型声明
+    "env.d.ts",
+    "src/.vuepress/**/*.ts",
+    "src/.vuepress/**/*.js",
+    "src/.vuepress/**/*.vue",
+    "src/.vuepress/theme/**/*.vue"  // 添加这一行
+  ],
+  "exclude": ["node_modules", "dist", "draft"]
+}

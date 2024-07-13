@@ -1,0 +1,137 @@
+// you can change colors here
+// 样式配置 https://theme-hope.vuejs.press/zh/config/style.html#%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE
+// 一、颜色设置
+// 1、主题色
+$theme-color: #3eaf7c; //  #096dd9
+// 2、字体颜色
+$text-color: (
+  light: #2c3e50,// 浅色模式
+  dark: #9e9e9e, // 深色模式
+);
+// 3、背景色
+$bg-color: (
+  light: #fff,
+  dark: #0d1117,
+) !default;
+
+//4、另一个浅背景色
+$bg-color-secondary: (
+  light: #f8f8f8,
+  dark: #161b22,
+) !default;
+
+//5、另一个更浅的背景色
+$bg-color-tertiary: (
+  light: #efeef4,
+  dark: #21262c,
+) !default;
+//6、 边框颜色
+$border-color: (
+  light: #eaecef, // 浅色模式
+  dark: #30363d, // 深色模式
+) !default;
+
+//7、元素阴影色
+
+$box-shadow: (
+  light: #f0f1f2,
+  dark: #282a32,
+) !default;
+
+//8、卡片阴影色
+
+$card-shadow: (
+  light: rgb(0 0 0 / 15%),
+  dark: rgb(0 0 0 / 30%),
+) !default;
+
+
+
+
+
+// 非官方提供 不知道是否有效
+$accentColor:#3eaf7c;
+
+// 非官方提供 不知道是否有效
+$codeBgColor:#282c34;
+
+
+
+
+
+// 代码相关
+$code-highlight-error-bg-color: rgba(244 63 94 / 16%) !default;
+$code-highlight-warning-bg-color: rgba(255 193 7 / 16%) !default;
+$code-line-diff-add-color: rgba(16 185 129 / 16%) !default;
+$code-line-diff-add-symbol-color: #298459 !default;
+$code-line-diff-remove-color: rgba(244 63 94 / 16%) !default;
+$code-line-diff-remove-symbol-color: #e0575b !default;
+$code-word-highlight-bg-color: rgb(0 0 0 / 20%) !default;
+$code-word-highlight-border: #636363 !default;
+
+// constants 常量
+$black: (
+  light: #000,
+  dark: #fff,
+);
+$grey-dark: (
+  light: #666,
+  dark: #999,
+);
+$grey-light: (
+  light: #999,
+  dark: #666,
+);
+$white: (
+  light: #fff,
+  dark:#000,
+);
+
+// 二、布局设置 
+// 1、导航栏设置
+// 导航栏高度
+$navbar-height: 3.75rem;
+// 导航栏水平填充
+$navbar-horizontal-padding: 0.2rem;
+// 导航栏垂直填充
+$navbar-vertical-padding: 0.7rem;
+// 移动设备上的导航栏高度
+$navbar-mobile-height: 3.25rem !default;
+// 移动设备上的导航栏水平填充
+$navbar-mobile-horizontal-padding: 1rem !default;
+// 移动设备上的导航栏垂直填充
+$navbar-mobile-vertical-padding: 0.5rem !default;
+
+// 2、侧边栏
+$sidebar-width: 17rem;
+$sidebar-mobile-width: 16rem !default;
+
+
+// 3、content 内容
+// 主要内容的宽度
+$content-width: 80%; //可以使用 百分比 或者像素80%、12px
+
+
+
+// 主页内容的宽度
+$home-page-width: 1160px;// 默认 1160px
+
+// 4、font 字体
+// 将 Windows 网页字体设置为思源宋体 (当然你也要记得导入这个字体) 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
+// $font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", STHeiti, "Microsoft YaHei", SimSun, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' !default;
+$font-family: '"Noto Serif SC", serif'; // 配置说明 修改字体 | vuepress-theme-hope https://theme-hope.vuejs.press/zh/guide/customize/font.html#%E5%AD%97%E4%BD%93%E5%BA%93
+$font-family-heading: '"ST Heiti",Georgia,"WenQuanYi Micro Hei","PingFang SC",'; //'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';// 默认 $font-family !default;
+
+
+//  代码上使用的字体
+$font-family-mono: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace' !default;
+
+// 5、code 代码
+// 代码块中行号的宽度
+$code-line-number-width: 2rem !default;
+
+// 6、transition 过渡
+// 用于颜色的过渡
+$color-transition: "0.3s ease" !default;
+// 用于变换动画的过渡
+$transform-transition: "0.3s ease" !default;
