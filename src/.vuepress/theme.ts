@@ -17,13 +17,13 @@ export default hopeTheme({
 
   // 设置文章目录展示 https://theme-hope.vuejs.press/zh/guide/layout/page.html#%E6%A0%87%E9%A2%98%E5%88%97%E8%A1%A8
   // 说明 只是影响文章右侧显示 设置false后 全部文章都不存在 文章中使用[[toc]] 或者 Vue 目录组件  <Toc /> 不会受到影响
-  toc:false,
+  toc:true,
   // 是否显示 上一篇/下一篇 链接 https://theme-hope.vuejs.press/zh/guide/layout/page.html#%E8%AE%BE%E7%BD%AE%E6%A0%87%E9%A2%98%E6%B7%B1%E5%BA%A6
   prevLink:false,
   nextLink:false,
 
   // 仓库地址
-  repo: "https://github.com/powwssir",
+  repo: "https://github.com/powwssir/powwssir.github.io",
 
   //打印按钮
   // 其他界面功能 https://theme-hope.vuejs.press/zh/guide/interface/others.html#%E6%89%93%E5%8D%B0%E6%8C%89%E9%92%AE
@@ -200,6 +200,10 @@ export default hopeTheme({
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     mdEnhance: {
+      // 思维导图
+      //[思维导图 | vuepress-theme-hope](https://theme-hope.vuejs.press/zh/guide/markdown/chart/markmap.html#%E6%A1%88%E4%BE%8B)
+      markmap: true,
+
       align: true,
       attrs: true,
       codetabs: true,

@@ -39,6 +39,8 @@ category:
 </div>
 -->
 
+Linux性能分析相关 [brendangregg 个人网站](https://www.brendangregg.com/linuxperf.html)
+
 ::: center
 
  <SiteInfo

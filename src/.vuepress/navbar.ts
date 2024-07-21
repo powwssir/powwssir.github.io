@@ -19,6 +19,8 @@ export default navbar([
   gennavbar6newDeploy(),
   // 项目
   gennavbar7Project(),
+   // 面试
+   gennavbar7Interview(),
 ]);
 
 
@@ -38,18 +40,18 @@ function gennavbar1Computer(){
     children: [
       {
         text: "计算机网络",
-        icon: "book",
-        link: "network/network"
+        // icon: "book",
+        link: "network/outline.md"
       },
       {
         text: "计算机操作系统",
-        icon: "book",
-        link: "operator/operator"
+        // icon: "book",
+        link: "operator/outline.md"
       },
       {
         text: "数据结构和算法",
-        icon: "book",
-        link: "structure/structure"
+        // icon: "book",
+        link: "structure/outline.md"
       },
     ]
   }
@@ -63,7 +65,7 @@ function gennavbar2Java(){
       {
         text: "JAVA基础",
         //icon: "book",
-        link: "JavaBasic/java01.md" // 直接指向第一篇文章
+        link: "JavaBasic/outline.md" // 直接指向第一篇文章
       },
       {
         text: "JAVA集合框架",
@@ -135,22 +137,37 @@ function gennavbar5Source(){
       {
         text: "Java源码系列",
         //icon: "book",
-        link: "javalist01-map.md"
+        link: "java/outline.md"
+      },
+      {
+        text: "Mybatis源码系列",
+        //icon: "book",
+        link: "mybatis/spring01-.md"
       },
       {
         text: "Spring源码系列",
         //icon: "book",
-        link: "spring01-.md"
+        link: "spring/spring01-.md"
       },
       {
         text: "SpringBoot源码系列",
         //icon: "book",
-        link: "springboot01-.md"
+        link: "springboot/springboot01-.md"
       },
       {
         text: "SpringBoot集成源码系列",
         //icon: "book",
-        link: "springbootMerg01-.md"
+        link: "springbootmerge/springbootMerg01-.md"
+      },
+      {
+        text: "Skywalking源码系列",
+        //icon: "book",
+        link: "skywalking/skywalking01-.md"
+      },
+      {
+        text: "Sentinel源码系列",
+        //icon: "book",
+        link: "sentinel/sentinel01-.md"
       },
 
     ],
@@ -225,17 +242,46 @@ function  gennavbar7Project(){
         link: "projectLearn-.md"
       },
       { 
-        // 各类源码学习demo、简单实现
+        // 具有实际应用场景的项目
         text: "应用项目",
         //icon: "book",
         link: "project-.md"
       },
-      { 
-        // 各类源码学习demo、简单实现
+      { // 记录可能或者出现过的错误 参见 极客时间 常见错误案例(有相关记录笔记)
+        text: "场景案例",
+        //icon: "book",
+        link: "scenariocase/outline.md"
+      },
+      { // 包括开发流程 使用到的工具资料等
         text: "开发规范",
+        //icon: "book",
+        link: "specifications/projectRule.md"
+      },
+      { // 记录可能或者出现过的错误 参见 极客时间 常见错误案例(有相关记录笔记)
+        text: "性能优化",
+        //icon: "book",
+        link: "performance/outline.md"
+      },
+      { // 记录可能或者出现过的错误 参见 极客时间 常见错误案例(有相关记录笔记)
+        text: "错误案例",
+        //icon: "book",
+        link: "errorcase/errorcase.md"
+      },
+      { // 结合工具来剖析问题 
+        text: "问题排查剖析",
         //icon: "book",
         link: "projectRule-.md"
       },
     ]
   }
+}
+
+
+
+function gennavbar7Interview(){
+  return {
+    text: "面试汇总",
+    link: "/interview/",
+  }
+
 }
