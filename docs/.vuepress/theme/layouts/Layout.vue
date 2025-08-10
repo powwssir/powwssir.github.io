@@ -74,7 +74,7 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import PageSidebar from '@theme/components/PageSidebar.vue'
 import { resolveSidebarItems, resolveHeaders } from '../util'
 export default {
-  components: { Home, Page, Sidebar, Navbar, PageSidebar},
+  components: { Home, Page, PageSidebar,Navbar,Sidebar},
 
   data () {
     return {

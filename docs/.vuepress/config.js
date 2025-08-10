@@ -166,7 +166,6 @@ module.exports = {
         }]
     ],
     themeConfig: {
-        darkMode: true, // 启用黑暗模式切换
         docsRepo: "fuzhengwei/CodeGuide",
         // 编辑文档的所在目录
         docsDir: 'docs',
@@ -184,22 +183,22 @@ module.exports = {
                 lastUpdated: "上次更新",
                 nav: [
                     {
-                        text: '编程路书', link: '/md/road-map/road-map.md'
+                        text: '编程路书', link: '/md/other/road-map.md'
                     },
                     {
                         text: 'Java',
                         items: [
                             {
                                 text: '面经手册',
-                                link: '/md/java/interview/2020-07-28-面经手册 · 开篇《面试官都问我啥》.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: '用Java实现JVM',
-                                link: '/md/java/develop-jvm/2019-05-01-用Java实现JVM第一章《命令行工具》.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: '基础技术',
-                                link: '/md/java/core/2020-01-06-[源码分析]咋嘞？你的IDEA过期了吧！加个Jar包就破解了，为什么？.md'
+                                link: '/md/other/about-me.md'
                             }
                         ]
                     },
@@ -208,19 +207,19 @@ module.exports = {
                         items: [
                             {
                                 text: 'Spring 手撸专栏',
-                                link: '/md/spring/develop-spring/2021-05-16-第1章：开篇介绍，手写Spring能给你带来什么？.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: 'MyBatis 手撸专栏',
-                                link: '/md/spring/develop-mybatis/2022-03-20-第1章：开篇介绍，手写Mybatis能给你带来什么？.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: 'Spring Cloud',
-                                link: '/md/spring/spring-cloud/2019-10-31-Spring Cloud零《总有一偏概述告诉你SpringCloud是什么》.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: '源码分析(Mybatis、Quartz)',
-                                link: '/md/spring/source-code/2019-12-25-[源码分析]Mybatis接口没有实现类为什么可以执行增删改查.md'
+                                link: '/md/other/about-me.md'
                             }
                         ]
                     },
@@ -229,20 +228,20 @@ module.exports = {
                         items: [
                             {
                                 text: '前端',
-                                link: '/md/spring/develop-spring/2021-05-16-第1章：开篇介绍，手写Spring能给你带来什么？.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: 'Lua',
-                                link: '/md/about/me/about-me.md'
+                                link: '/md/other/about-me.md'
                             },
                             {
                                 text: 'Python',
-                                link: '/md/about/me/about-me.md'
+                                link: '/md/other/about-me.md'
                             }
                         ]
                     },
                     {
-                        text: 'AI相关', link: '/md/other/guide-to-reading.md'
+                        text: 'AI相关', link: '/md/other/about-me.md'
                     },
                     {
                         text: '设计模式',
@@ -252,15 +251,15 @@ module.exports = {
                                 items: [
                                     {
                                         text: '创建型模式',
-                                        link: '/md/develop/design-pattern/2020-05-20-重学Java设计模式《实战工厂方法模式》.md'
+                                        link: '/md/other/about-me.md'
                                     },
                                     {
                                         text: '结构型模式',
-                                        link: '/md/develop/design-pattern/2020-06-02-重学 Java 设计模式《适配器模式》.md'
+                                        link: '/md/other/about-me.md'
                                     },
                                     {
                                         text: '行为型模式',
-                                        link: '/md/develop/design-pattern/2020-06-18-重学 Java 设计模式《实战责任链模式》.md'
+                                        link: '/md/other/about-me.md'
                                     }
                                 ]
                             },
@@ -268,19 +267,12 @@ module.exports = {
                     },
                     {
                         text: '部署',
-                        link: '/md/devops/2023-04-18-tool.md'
+                        link: '/md/other/about-me.md'
                     },
                     {
                         text: '关于',
                         items: [
-                            {text: '关于自己', link: '/md/about/me/about-me.md'},
-                        ]
-                    },
-                    {
-                        text: '主题',
-                        children: [
-                          { text: '白天', link: '#', action: () => { document.documentElement.classList.remove('dark') } },
-                          { text: '黑夜', link: '#', action: () => { document.documentElement.classList.add('dark') } }
+                            {text: '关于自己', link: '/md/other/about-me.md'},
                         ]
                     },
                     {
@@ -291,7 +283,7 @@ module.exports = {
                 sidebar: {
                     "/md/other/": genBarOther(),
               
-                    "/md/about/": genBarAbout()
+                    //"/md/about/": genBarAbout()
                 }
             }
         }

@@ -7,5 +7,6 @@ actionLinks:
 - link: /md/other/guide-to-reading.md
   text: 开始阅读 →
   class: primary
-footer: copyright ©小叶 2024-present. 
+# footer: copyright ©小叶 2024-present. 
 ---
+
