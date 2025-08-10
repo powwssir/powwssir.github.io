@@ -1,38 +1,50 @@
-name: 部署 VuePress 到 GitHub Pages
+name: Deploy VuePress to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # 触发分支，根据你的实际分支修改
+    branches: [ main ]  # 触发分支，根据你的实际情况修改
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout 代码
+      # 1. 检出代码
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # 获取完整历史记录
+          fetch-depth: 0  # 获取完整提交历史
 
-      - name: 设置 Node.js
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # 使用 Node.js 18
+          node-version: 18  # 推荐使用 LTS 版本
 
-      - name: 安装依赖
+      # 3. 安装依赖（使用缓存优化）
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
         run: npm install --frozen-lockfile
 
-      - name: 构建文档
+      # 4. 构建项目
+      - name: Build VuePress
         run: |
           npm run build
-          # 确保 .site 目录存在必要的文件
-          touch .site/.nojekyll  # 防止 GitHub Pages 忽略下划线开头的文件
+          # 确保生成必要的部署文件
+          touch .site/.nojekyll          # 禁用 Jekyll 处理
           # echo 'yourdomain.com' > .site/CNAME  # 如果有自定义域名
 
-      - name: 部署到 GitHub Pages
+      # 5. 部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}  # 自动使用内置 token
-          publish_dir: .site  # 你的构建输出目录
-          keep_files: false   # 清除目标分支的旧文件
-          force_orphan: true  # 强制使用单次提交
+          github_token: ${{ secrets.PAT_TOKEN }}  # 使用你的 PAT
+          publish_dir: .site                       # 构建输出目录
+          keep_files: false                       # 清理旧文件
+          force_orphan: true                      # 单提交历史
+          # user_name: 'github-actions[bot]'        # 可选：提交者名称
+          # user_email: 'github-actions[bot]@users.noreply.github.com' # 可选：提交者邮箱
