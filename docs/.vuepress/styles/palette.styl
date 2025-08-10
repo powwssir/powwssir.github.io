@@ -1,0 +1,31 @@
+// 内容的宽度
+$contentWidth = 100%
+
+// 首页的宽度
+$homePageWidth = 1200px
+
+$MQNarrow ?= 1280px
+
+// 颜色
+$accentColor = #3eaf7c
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282c34
+
+// 新增 hero 渐变文字样式
+.hero
+  h1
+    background: linear-gradient(90deg, #3eaf7c, #42b983)  // 从左到右的渐变色
+    -webkit-background-clip: text  // 关键：使背景仅作用于文字
+    background-clip: text
+    color: transparent !important  // 关键：隐藏原文字颜色，显示渐变背景
+    display: inline-block  // 确保渐变效果正确应用
+    padding: 0.2em 0  // 可选：调整文字间距
+  // 可选：调整描述文字样式
+  .description
+    color: lighten($textColor, 20%) !important
+  // 可选：调整按钮样式
+  .action-button
+    color: white !important
+    background: linear-gradient(90deg, #3eaf7c, #42b983) !important
+    border: none !important

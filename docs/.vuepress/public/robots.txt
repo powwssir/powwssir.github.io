@@ -1,0 +1,2 @@
+Sitemap: https://blog.tshare.top/sitemap.xml
+User-agent: *
